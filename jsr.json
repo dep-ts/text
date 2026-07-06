@@ -1,6 +1,6 @@
 {
   "name": "@dep/text",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tiny helpers for reading, writing, appending, and streaming text files in Deno.",
   "exports": "./src/main.ts",
   "author": {

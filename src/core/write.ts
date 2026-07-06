@@ -19,9 +19,9 @@ import { exists } from '@std/fs';
 export const write = async (
   path: string | URL,
   data: string | ReadableStream<string>,
-  options?: Deno.WriteFileOptions
+  options?: Deno.WriteFileOptions,
 ): Promise<void> => {
   const dir = dirname(path);
-  if (!(await exists(dir))) Deno.mkdir(dir, { recursive: true });
+  if (!(await exists(dir))) await Deno.mkdir(dir, { recursive: true });
   return await Deno.writeTextFile(path, data, options);
 };
